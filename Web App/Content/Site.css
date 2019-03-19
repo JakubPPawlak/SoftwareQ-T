@@ -29,3 +29,10 @@ textarea {
         padding: 0;
     }
 }
+
+/* Calculation Page */
+#submitbtn {
+    background-color: #0975dc;
+    border: 1px solid #0975dc;
+    border-radius: 15px;
+}
