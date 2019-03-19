@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsuranceService.WhiteboxTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackboxTests", "BlackboxTests\BlackboxTests.csproj", "{5109261C-96B8-43A9-BFA0-4E5DAAEC9833}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web App", "Web App\Web App.csproj", "{0E7F5D9C-4171-47EA-B4A8-3B2D75C417B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5109261C-96B8-43A9-BFA0-4E5DAAEC9833}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5109261C-96B8-43A9-BFA0-4E5DAAEC9833}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5109261C-96B8-43A9-BFA0-4E5DAAEC9833}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E7F5D9C-4171-47EA-B4A8-3B2D75C417B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E7F5D9C-4171-47EA-B4A8-3B2D75C417B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E7F5D9C-4171-47EA-B4A8-3B2D75C417B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E7F5D9C-4171-47EA-B4A8-3B2D75C417B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
