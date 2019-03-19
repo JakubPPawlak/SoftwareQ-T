@@ -1,12 +1,13 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using OpenQA.Selenium.Support.UI;
 namespace KatalonSeleniumTests
 {
     [TestFixture]
@@ -14,13 +15,13 @@ namespace KatalonSeleniumTests
     {
         private IWebDriver driver;
         private StringBuilder verificationErrors;
-        private string baseURL = "http://localhost:62089/CalculatePremium";
+        private string baseURL;
         private bool acceptNextAlert = true;
 
         [SetUp]
         public void SetupTest()
         {
-            driver = new FirefoxDriver();
+            driver = new ChromeDriver();
             baseURL = "http://localhost:62089/CalculatePremium";
             verificationErrors = new StringBuilder();
         }
@@ -38,80 +39,61 @@ namespace KatalonSeleniumTests
             }
             Assert.AreEqual("", verificationErrors.ToString());
         }
-
         [Test]
-        public void The1Test()
+        public void TestCase1()
         {
             driver.Navigate().GoToUrl("http://localhost:62089/CalculatePremium");
             driver.FindElement(By.Id("MainContent_TextBox2")).Click();
-            driver.FindElement(By.Id("MainContent_TextBox2")).Click();
             driver.FindElement(By.Id("MainContent_TextBox2")).Clear();
             driver.FindElement(By.Id("MainContent_TextBox2")).SendKeys("male");
-            driver.FindElement(By.Id("MainContent_TextBox1")).Click();
-            driver.FindElement(By.Id("MainContent_TextBox1")).Click();
             driver.FindElement(By.Id("MainContent_TextBox1")).Clear();
-            driver.FindElement(By.Id("MainContent_TextBox1")).SendKeys("31");
+            driver.FindElement(By.Id("MainContent_TextBox1")).SendKeys("23");
             driver.FindElement(By.Id("MainContent_Button1")).Click();
             Assert.AreEqual("6", driver.FindElement(By.Id("MainContent_Label1")).Text);
         }
-        public void The2Test()
+        [Test]
+        public void TestCase2()
+        {
+            driver.Navigate().GoToUrl("http://localhost:62089/CalculatePremium");
+            driver.FindElement(By.Id("MainContent_TextBox2")).Click();
+            driver.FindElement(By.Id("MainContent_TextBox2")).Clear();
+            driver.FindElement(By.Id("MainContent_TextBox2")).SendKeys("male");
+            driver.FindElement(By.Id("MainContent_TextBox1")).Clear();
+            driver.FindElement(By.Id("MainContent_TextBox1")).SendKeys("50");
+            driver.FindElement(By.Id("MainContent_Button1")).Click();
+            Assert.AreEqual("0.75", driver.FindElement(By.Id("MainContent_Label1")).Text);
+        }
+        [Test]
+        public void TestCase3()
         {
             driver.Navigate().GoToUrl("http://localhost:62089/CalculatePremium");
             driver.FindElement(By.Id("MainContent_TextBox2")).Click();
             driver.FindElement(By.Id("MainContent_TextBox2")).Clear();
             driver.FindElement(By.Id("MainContent_TextBox2")).SendKeys("female");
-            driver.FindElement(By.Id("MainContent_TextBox1")).Click();
+            driver.FindElement(By.Id("MainContent_TextBox1")).Clear();
+            driver.FindElement(By.Id("MainContent_TextBox1")).SendKeys("36");
+            driver.FindElement(By.Id("MainContent_Button1")).Click();
+            Assert.AreEqual("2.5", driver.FindElement(By.Id("MainContent_Label1")).Text);
+        }
+        [Test]
+        public void TestCase4()
+        {
+            driver.Navigate().GoToUrl("http://localhost:62089/CalculatePremium");
+            driver.FindElement(By.Id("MainContent_TextBox2")).Click();
+            driver.FindElement(By.Id("MainContent_TextBox2")).Clear();
+            driver.FindElement(By.Id("MainContent_TextBox2")).SendKeys("female");
             driver.FindElement(By.Id("MainContent_TextBox1")).Clear();
             driver.FindElement(By.Id("MainContent_TextBox1")).SendKeys("51");
             driver.FindElement(By.Id("MainContent_Button1")).Click();
             Assert.AreEqual("0.375", driver.FindElement(By.Id("MainContent_Label1")).Text);
-            driver.FindElement(By.Id("MainContent_TextBox2")).Click();
-            driver.FindElement(By.Id("MainContent_TextBox2")).Click();
-            // ERROR: Caught exception [ERROR: Unsupported command [doubleClick | id=MainContent_TextBox2 | ]]
-            driver.FindElement(By.Id("MainContent_TextBox2")).Clear();
-            driver.FindElement(By.Id("MainContent_TextBox2")).SendKeys("female");
-            driver.FindElement(By.Id("MainContent_TextBox1")).Click();
-            driver.FindElement(By.Id("MainContent_TextBox1")).Click();
-            // ERROR: Caught exception [ERROR: Unsupported command [doubleClick | id=MainContent_TextBox1 | ]]
-            driver.FindElement(By.Id("MainContent_TextBox1")).Clear();
-            driver.FindElement(By.Id("MainContent_TextBox1")).SendKeys("23");
-        
-            driver.FindElement(By.Id("MainContent_Button1")).Click();
-            Assert.AreEqual("5", driver.FindElement(By.Id("MainContent_Label1")).Text);
         }
-        public void The3Test()
+        [Test]
+        public void TestCase5()
         {
             driver.Navigate().GoToUrl("http://localhost:62089/CalculatePremium");
-            driver.FindElement(By.Id("MainContent_TextBox2")).Click();
             driver.FindElement(By.Id("MainContent_TextBox2")).Click();
             driver.FindElement(By.Id("MainContent_TextBox2")).Clear();
             driver.FindElement(By.Id("MainContent_TextBox2")).SendKeys("male");
-            driver.FindElement(By.Id("MainContent_TextBox1")).Click();
-            driver.FindElement(By.Id("MainContent_TextBox1")).Click();
-            driver.FindElement(By.Id("MainContent_TextBox1")).Clear();
-            driver.FindElement(By.Id("MainContent_TextBox1")).SendKeys("19");
-            driver.FindElement(By.Id("MainContent_Button1")).Click();
-            Assert.AreEqual("6", driver.FindElement(By.Id("MainContent_Label1")).Text);
-        }
-        public void The4Test()
-        {
-            driver.Navigate().GoToUrl("http://localhost:62089/CalculatePremium");
-            driver.FindElement(By.Id("MainContent_TextBox2")).Click();
-            driver.FindElement(By.Id("MainContent_TextBox1")).Clear();
-            driver.FindElement(By.Id("MainContent_TextBox1")).SendKeys("51");
-            driver.FindElement(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='Calculate your premium below'])[1]/following::div[2]")).Click();
-            driver.FindElement(By.Id("MainContent_Button1")).Click();
-            Assert.AreEqual("0.75", driver.FindElement(By.Id("MainContent_Label1")).Text);
-        }
-        public void The5Test()
-        {
-            driver.Navigate().GoToUrl("http://localhost:62089/CalculatePremium");
-            driver.FindElement(By.Id("MainContent_TextBox2")).Click();
-            driver.FindElement(By.Id("MainContent_TextBox2")).Click();
-            driver.FindElement(By.Id("MainContent_TextBox2")).Clear();
-            driver.FindElement(By.Id("MainContent_TextBox2")).SendKeys("male");
-            driver.FindElement(By.Id("MainContent_TextBox1")).Click();
-            driver.FindElement(By.Id("MainContent_TextBox1")).Click();
             driver.FindElement(By.Id("MainContent_TextBox1")).Clear();
             driver.FindElement(By.Id("MainContent_TextBox1")).SendKeys("16");
             driver.FindElement(By.Id("MainContent_Button1")).Click();
