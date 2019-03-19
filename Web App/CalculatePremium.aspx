@@ -1,19 +1,5 @@
 ﻿<%@ Page Title="Calculate Premium" MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="CalculatePremium.aspx.cs" Inherits="Web_App.CalculatePremium" %>
 
-<%--<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <p>YES</p>
-        </div>
-    </form>
-</body>
-</html>--%>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Calculate your premium below</h2>
