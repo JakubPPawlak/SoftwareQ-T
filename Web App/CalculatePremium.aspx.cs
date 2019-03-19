@@ -25,13 +25,16 @@ namespace Web_App
             return result;
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+
+        protected void Button1_Click1(object sender, EventArgs e)
         {
             float result;
             int age = int.Parse(TextBox1.Text);
             string gender = TextBox2.Text;
             result = Calculate(age, gender);
-            TextBox3.Text = result.ToString();
+
+            Label1.Text = result.ToString();
+            Label1.Visible = true;
         }
     }
 }

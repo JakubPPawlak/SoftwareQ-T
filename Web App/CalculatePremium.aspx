@@ -16,18 +16,18 @@
 </html>--%>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Form</h2>
-    <p>Gender:<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-    </p>
-    <p>Age:
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-    </p>
-        <div>
-            <p>
-                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
-            </p>
-            <p>Your premium:
-                <asp:TextBox ID="TextBox3" runat="server" ReadOnly="True"></asp:TextBox>
-            </p>
+    <h2>Calculate your premium below</h2>
+    <p style="left: 20px; right: 5px">&nbsp;</p>
+    <div>
+            <div style="height: 202px">
+                Gender<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                <br />
+                Age
+                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <br />
+                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Submit" />
+                <br />
+                Your premium: <asp:Label ID="Label1" runat="server" Visible="False"></asp:Label>
+            </div>
         </div>
 </asp:Content>
