@@ -13,6 +13,15 @@ namespace Web_App {
     public partial class CalculatePremium {
         
         /// <summary>
+        /// genderLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label genderLabel;
+        
+        /// <summary>
         /// TextBox2 control.
         /// </summary>
         /// <remarks>
@@ -20,6 +29,15 @@ namespace Web_App {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        
+        /// <summary>
+        /// ageLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ageLabel;
         
         /// <summary>
         /// TextBox1 control.
@@ -38,6 +56,15 @@ namespace Web_App {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// premiumLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label premiumLabel;
         
         /// <summary>
         /// Label1 control.

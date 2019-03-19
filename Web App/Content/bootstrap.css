@@ -113,7 +113,7 @@ input,
 optgroup,
 select,
 textarea {
-  margin: 19px 0 0px 52px;
+  margin: 10px 0 0px 0px;
   color: inherit;
 }
 button {

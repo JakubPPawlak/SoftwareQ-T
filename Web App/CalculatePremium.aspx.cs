@@ -34,7 +34,6 @@ namespace Web_App
             result = Calculate(age, gender);
 
             Label1.Text = result.ToString();
-            Label1.Visible = true;
         }
     }
 }
