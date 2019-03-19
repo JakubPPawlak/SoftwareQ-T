@@ -1,0 +1,21 @@
+!define COMMAND_PATTERN {%m -r fitnesse.fitserver.FitServer,dotnet2\fit.dll %p}
+!define TEST_RUNNER {dotnet2\Runner.exe}
+
+# this is the path to the fixture code
+!path C:\Users\Gary\Documents\college\year 3\Software Quality Testing\Assignment\BlackboxTests\bin\Debug\BlackboxTests.dll
+!| BlackboxTests.InsuranceServiceTests|
+|age    |gender           |premium?   |
+|18     |male             |6.00       |
+|36     |male             |5.00       |
+|17     |male             |0          |
+|19     |female           |5.00       |
+|31     |female           |2.50       |
+|17     |female           |0          |
+|17     |invalidString    |0          |
+|50     |invalidString    |0          |
+|50     |male             |0.75       |
+|50     |female           |0.375      |
+
+
+
+
