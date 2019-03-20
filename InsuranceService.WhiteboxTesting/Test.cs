@@ -30,14 +30,14 @@ namespace InsuranceService.WhiteboxTesting
         public void Test_02()
         {
             float result = SUT.CalcPremium(50, "female");
-            Assert.That(result, Is.EqualTo(0.375));
+            Assert.That(result, Is.EqualTo(1.75));
         }
 
         [Test]
         public void Test_03()
         {
             float result = SUT.CalcPremium(31, "female");
-            Assert.That(result, Is.EqualTo(2.5));
+            Assert.That(result, Is.EqualTo(3.5));
         }
 
         [Test]
@@ -58,7 +58,7 @@ namespace InsuranceService.WhiteboxTesting
         public void Test_06()
         {
             float result = SUT.CalcPremium(50, "male");
-            Assert.That(result, Is.EqualTo(0.75));
+            Assert.That(result, Is.EqualTo(2.5));
         }
 
         [Test]
