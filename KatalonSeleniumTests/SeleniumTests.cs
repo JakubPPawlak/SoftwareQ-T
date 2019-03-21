@@ -60,9 +60,9 @@ namespace KatalonSeleniumTests
             driver.FindElement(By.Id("MainContent_TextBox2")).Clear();
             driver.FindElement(By.Id("MainContent_TextBox2")).SendKeys("male");
             driver.FindElement(By.Id("MainContent_TextBox1")).Clear();
-            driver.FindElement(By.Id("MainContent_TextBox1")).SendKeys("50");
+            driver.FindElement(By.Id("MainContent_TextBox1")).SendKeys("36");
             driver.FindElement(By.Id("MainContent_Button1")).Click();
-            Assert.AreEqual("0.75", driver.FindElement(By.Id("MainContent_Label1")).Text);
+            Assert.AreEqual("5", driver.FindElement(By.Id("MainContent_Label1")).Text);
         }
         [Test]
         public void TestCase3()
@@ -72,9 +72,9 @@ namespace KatalonSeleniumTests
             driver.FindElement(By.Id("MainContent_TextBox2")).Clear();
             driver.FindElement(By.Id("MainContent_TextBox2")).SendKeys("female");
             driver.FindElement(By.Id("MainContent_TextBox1")).Clear();
-            driver.FindElement(By.Id("MainContent_TextBox1")).SendKeys("36");
+            driver.FindElement(By.Id("MainContent_TextBox1")).SendKeys("21");
             driver.FindElement(By.Id("MainContent_Button1")).Click();
-            Assert.AreEqual("2.5", driver.FindElement(By.Id("MainContent_Label1")).Text);
+            Assert.AreEqual("5", driver.FindElement(By.Id("MainContent_Label1")).Text);
         }
         [Test]
         public void TestCase4()
@@ -84,9 +84,9 @@ namespace KatalonSeleniumTests
             driver.FindElement(By.Id("MainContent_TextBox2")).Clear();
             driver.FindElement(By.Id("MainContent_TextBox2")).SendKeys("female");
             driver.FindElement(By.Id("MainContent_TextBox1")).Clear();
-            driver.FindElement(By.Id("MainContent_TextBox1")).SendKeys("51");
+            driver.FindElement(By.Id("MainContent_TextBox1")).SendKeys("16");
             driver.FindElement(By.Id("MainContent_Button1")).Click();
-            Assert.AreEqual("0.375", driver.FindElement(By.Id("MainContent_Label1")).Text);
+            Assert.AreEqual("0", driver.FindElement(By.Id("MainContent_Label1")).Text);
         }
         [Test]
         public void TestCase5()

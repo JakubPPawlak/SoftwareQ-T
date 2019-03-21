@@ -9,12 +9,12 @@
 |36     |male             |5.00       |
 |17     |male             |0          |
 |19     |female           |5.00       |
-|31     |female           |2.50       |
+|31     |female           |3.50       |
 |17     |female           |0          |
 |17     |invalidString    |0          |
 |50     |invalidString    |0          |
-|50     |male             |0.75       |
-|50     |female           |0.375      |
+|50     |male             |2.5       |
+|50     |female           |1.75      |
 
 
 
